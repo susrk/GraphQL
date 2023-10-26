@@ -1,0 +1,27 @@
+name: Parallel Jobs with Sleep
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Parallel Job 1
+        run: |
+          echo "Starting Parallel Job 1"
+          sleep 30  # Sleep for 30 seconds
+          echo "Parallel Job 1 Completed"
+
+  job2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Parallel Job 2
+        run: |
+          echo "Starting Parallel Job 2"
+          sleep 45  # Sleep for 45 seconds
+          echo "Parallel Job 2 Completed"
